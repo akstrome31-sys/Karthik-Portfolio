@@ -392,7 +392,10 @@ body.dark-mode .icon {
     align-items: stretch;
     min-height: 180px;
 }
-.project-content { display:flex; flex-direction:column; justify-content:space-between; }
+.project-content { display:flex; flex-direction:column; justify-content:space-between; flex:1; }
+.project-card { padding: 1rem; border-radius: 10px; }
+.project-thumb { flex: 0 0 86px; display:flex; align-items:center; justify-content:center; }
+.project-content h3 { font-size:1.125rem; }
 .project-thumb {
     width: 86px;
     height: 86px;
