@@ -795,6 +795,19 @@ body.dark-mode .btn-ghost {
     border: 1px solid rgba(255,255,255,0.14);
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
+/* Ensure hero CTAs sit above background imagery and are always legible */
+.hero-ctas .btn {
+    position: relative;
+    z-index: 20;
+}
+.hero-ctas .btn-ghost { color: #ffffff; }
+
+/* Navigation links in dark mode */
+body.dark-mode .nav-links a { color: #e6eef8; }
+body.dark-mode .nav-links a.nav-active { color: #9ec8ff; border-bottom-color: #60a5fa; }
+
+/* Contact page ghost button stronger contrast */
+body.dark-mode .card.contact-card .btn-ghost { background: rgba(255,255,255,0.04); color: #f8fafc; border-color: rgba(255,255,255,0.12); }
 /* Ensure hero CTA contrast in dark hero backgrounds */
 body.dark-mode .hero-ctas .btn-ghost {
     background: rgba(255,255,255,0.03);
