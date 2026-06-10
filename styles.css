@@ -404,6 +404,19 @@ body.dark-mode .icon {
 .project-video { margin-top: 0.75rem; }
 .project-video video { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 20px rgba(2,6,23,0.06); }
 
+/* Responsive YouTube embeds used in projects */
+.video-embed {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.06);
+}
+
+@media (max-width: 720px) {
+    .video-embed { height: 220px; }
+}
+
 .edu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
