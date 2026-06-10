@@ -400,6 +400,10 @@ body.dark-mode .icon {
 .project-actions { display:flex; gap:0.5rem; }
 .project-actions .btn { padding: 0.45rem 0.85rem; font-size: 0.95rem; }
 
+/* Video player in project cards */
+.project-video { margin-top: 0.75rem; }
+.project-video video { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 20px rgba(2,6,23,0.06); }
+
 .edu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
