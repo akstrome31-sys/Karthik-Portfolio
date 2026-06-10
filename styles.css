@@ -699,12 +699,20 @@ footer {
     color: var(--text-primary);
     border: 1px solid rgba(0,0,0,0.08);
 }
+.btn:focus {
+    outline: 3px solid rgba(37,99,235,0.18);
+    outline-offset: 2px;
+}
 .hero-ctas {
     margin-top: 1rem;
     display: flex;
     gap: 0.75rem;
     align-items: center;
     flex-wrap: wrap;
+}
+.hero-img {
+    width: 175px;
+    height: 175px;
 }
 .social-links {
     margin-top: 1rem;
