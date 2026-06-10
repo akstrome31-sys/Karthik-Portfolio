@@ -17,6 +17,11 @@
     /* Primary Accent */
     --primary-color: #2563eb;
 
+    /* Secondary button variables (used by inline styles to adapt across themes) */
+    --btn-secondary-bg: #ffffff;
+    --btn-secondary-fg: #0b1220;
+    --btn-secondary-border: 1px solid rgba(15,23,42,0.06);
+
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
 }
@@ -274,6 +279,9 @@ body.dark-mode {
     --bg-experience: #0a0a0a;
     --bg-projects: #050505;
     --bg-education: #0a0a0a;
+    --btn-secondary-bg: rgba(255,255,255,0.06);
+    --btn-secondary-fg: #f8fafc;
+    --btn-secondary-border: 1px solid rgba(255,255,255,0.12);
 }
 
 /* Black & white cards */
