@@ -521,15 +521,18 @@ body.dark-mode .navbar {
 
 /* ======== Hero Section ======== */
 .hero-img {
-    width: 190px;
-    height: 190px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
+    background-color: #ffffff;
+    padding: 6px;
     margin: 0;
     flex-shrink: 0;
-    border: 4px solid var(--primary-color);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 6px solid var(--primary-color);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    filter: contrast(1.05) saturate(1.05);
     display: block;
     transition: transform 0.3s ease;
 }
@@ -704,6 +707,9 @@ footer {
     outline: 3px solid rgba(37,99,235,0.18);
     outline-offset: 2px;
 }
+.btn {
+    min-width: 160px;
+}
 .hero-ctas {
     margin-top: 1rem;
     display: flex;
@@ -734,4 +740,20 @@ footer {
 @media (max-width: 768px) {
     .hero-ctas { justify-content: center; }
     .social-links { justify-content: center; }
+}
+
+/* Dark mode button visibility fixes */
+body.dark-mode .btn-primary {
+    background: linear-gradient(90deg,#3b82f6,#1e40af);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(59,130,246,0.18);
+}
+body.dark-mode .btn-ghost {
+    background: rgba(255,255,255,0.04);
+    color: #f8fafc;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+/* Ensure hero CTA contrast in dark hero backgrounds */
+body.dark-mode .hero-ctas .btn-ghost {
+    background: rgba(255,255,255,0.03);
 }
