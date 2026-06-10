@@ -400,6 +400,10 @@ body.dark-mode .icon {
 .project-actions { display:flex; gap:0.5rem; }
 .project-actions .btn { padding: 0.45rem 0.85rem; font-size: 0.95rem; }
 
+/* Ensure project titles and descriptions follow adaptive color variables */
+.project-card .project-content h3 { color: var(--text-primary); }
+.project-card .project-content p { color: var(--text-secondary); }
+
 /* Video player in project cards */
 .project-video { margin-top: 0.75rem; }
 .project-video video { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 20px rgba(2,6,23,0.06); }
@@ -743,6 +747,21 @@ footer {
     border: 1px solid rgba(16,24,40,0.08);
     box-shadow: 0 4px 14px rgba(2,6,23,0.04);
     backdrop-filter: blur(2px);
+}
+/* Secondary button: filled but neutral, visible in both light and dark modes */
+.btn-secondary {
+    background: #ffffff;
+    color: #0b1220;
+    border: 1px solid rgba(15,23,42,0.06);
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+.btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(2,6,23,0.12); }
+
+body.dark-mode .btn-secondary {
+    background: rgba(255,255,255,0.06);
+    color: #f8fafc;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 20px rgba(59,130,246,0.06);
 }
 .btn:focus {
     outline: 3px solid rgba(37,99,235,0.18);
