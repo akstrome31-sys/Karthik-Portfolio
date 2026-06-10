@@ -740,7 +740,9 @@ footer {
 .btn-ghost {
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(16,24,40,0.08);
+    box-shadow: 0 4px 14px rgba(2,6,23,0.04);
+    backdrop-filter: blur(2px);
 }
 .btn:focus {
     outline: 3px solid rgba(37,99,235,0.18);
@@ -788,9 +790,10 @@ body.dark-mode .btn-primary {
     box-shadow: 0 8px 20px rgba(59,130,246,0.18);
 }
 body.dark-mode .btn-ghost {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.06);
     color: #f8fafc;
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 /* Ensure hero CTA contrast in dark hero backgrounds */
 body.dark-mode .hero-ctas .btn-ghost {
