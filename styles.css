@@ -375,7 +375,7 @@ body.dark-mode .icon {
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 1.25rem;
 }
 
@@ -390,7 +390,9 @@ body.dark-mode .icon {
     display: flex;
     gap: 1rem;
     align-items: stretch;
+    min-height: 180px;
 }
+.project-content { display:flex; flex-direction:column; justify-content:space-between; }
 .project-thumb {
     width: 86px;
     height: 86px;
@@ -844,6 +846,29 @@ body.dark-mode .card.contact-card .btn-ghost { background: rgba(255,255,255,0.04
     background: rgba(255,255,255,0.06);
     color: #ffffff;
     border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Strong, specific hero/contact secondary button rules to guarantee visibility */
+.hero-ctas .btn-secondary,
+.card.contact-card .btn-secondary {
+    background: var(--btn-secondary-bg) !important;
+    color: var(--btn-secondary-fg) !important;
+    border: var(--btn-secondary-border) !important;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.06) !important;
+}
+
+/* If user is in dark-mode, hero secondary buttons use a solid dark background with white text for legibility */
+body.dark-mode .hero-ctas .btn-secondary {
+    background: #0b1220 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+/* Contact page secondary button dark-mode override */
+body.dark-mode .card.contact-card .btn-secondary {
+    background: #0b1220 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
 }
 /* Ensure hero CTA contrast in dark hero backgrounds */
 body.dark-mode .hero-ctas .btn-ghost {
