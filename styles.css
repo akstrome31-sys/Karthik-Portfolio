@@ -808,6 +808,16 @@ body.dark-mode .nav-links a.nav-active { color: #9ec8ff; border-bottom-color: #6
 
 /* Contact page ghost button stronger contrast */
 body.dark-mode .card.contact-card .btn-ghost { background: rgba(255,255,255,0.04); color: #f8fafc; border-color: rgba(255,255,255,0.12); }
+
+/* Hide any leftover per-project GitHub buttons if HTML still contains them */
+.projects-list .project-actions a[href*="github.com"] { display: none !important; }
+
+/* Force hero ghost CTAs to be visible in both modes */
+.hero-ctas .btn-ghost {
+    background: rgba(255,255,255,0.06);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.08);
+}
 /* Ensure hero CTA contrast in dark hero backgrounds */
 body.dark-mode .hero-ctas .btn-ghost {
     background: rgba(255,255,255,0.03);
