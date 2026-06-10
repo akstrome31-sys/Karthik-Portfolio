@@ -47,4 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
             // In light mode, the button shows dark-mode icon meaning "click to go dark"
         }
     });
+
+    // Runtime safety: remove any leftover per-project GitHub links that may still be served from cache
+    try {
+        const ghLinks = document.querySelectorAll('.project-actions a[href*="github.com"]');
+        ghLinks.forEach(a => a.remove());
+
+        // Ensure hero CTAs are always visible (force inline styles as last resort)
+        const heroCtas = document.querySelectorAll('.hero-ctas .btn');
+        heroCtas.forEach(btn => {
+            btn.style.zIndex = '9999';
+            btn.style.position = 'relative';
+            btn.style.opacity = '1';
+        });
+    } catch (e) {
+        // ignore; this is a non-critical enhancement
+        console.warn('Runtime CTA fixes skipped', e);
+    }
 });
