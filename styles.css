@@ -219,6 +219,21 @@ ul {
     border-color: #6ee7b7;
 }
 
+.project-card:nth-child(6) {
+    background: #ffe4c4;
+    border-color: #fdba74;
+}
+
+.project-card:nth-child(7) {
+    background: #dbeafe;
+    border-color: #93c5fd;
+}
+
+.project-card:nth-child(8) {
+    background: #fae8ff;
+    border-color: #f0abfc;
+}
+
 .edu-card:nth-child(1) {
     background: #f3e8ff;
     border-color: #d8b4fe;
@@ -299,6 +314,9 @@ body.dark-mode .project-card:nth-child(2),
 body.dark-mode .project-card:nth-child(3),
 body.dark-mode .project-card:nth-child(4),
 body.dark-mode .project-card:nth-child(5),
+body.dark-mode .project-card:nth-child(6),
+body.dark-mode .project-card:nth-child(7),
+body.dark-mode .project-card:nth-child(8),
 body.dark-mode .edu-card:nth-child(1),
 body.dark-mode .edu-card:nth-child(2) {
     background: #111111;
@@ -602,17 +620,36 @@ body.dark-mode .navbar {
 }
 
 .hero-bg {
+    position: relative;
     background-image: url('https://www.gbtec.com/fileadmin/images/main-navigation/infohub/stage-infohub.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--text-primary);
     text-align: left;
+    overflow: hidden;
+}
+
+.hero-3d-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .hero-bg .section-container {
+    position: relative;
+    z-index: 1;
     padding-top: 13rem;
     padding-bottom: 10rem;
+}
+
+.hero-img-wrap {
+    perspective: 900px;
+    flex-shrink: 0;
 }
 
 .hero-content {
